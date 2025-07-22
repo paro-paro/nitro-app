@@ -1,7 +1,7 @@
 Nitro does not compress response (same Content-Length: 6000), yet Vary: Accept-Encoding is added
 
 ```bash
-$ http :3000/test Accept-Encoding:gzip
+$ http :3000 Accept-Encoding:gzip
 
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -15,7 +15,7 @@ content-type: text/html
 ```
 
 ```bash
-$ http :3000/test Accept-Encoding:identity
+$ http :3000 Accept-Encoding:identity
 
 HTTP/1.1 200 OK
 Connection: keep-alive
